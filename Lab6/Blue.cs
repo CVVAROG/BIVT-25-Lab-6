@@ -12,6 +12,7 @@ namespace Lab6
     {
         public void Task1(ref int[,] matrix)
         {
+            // code here
             if (matrix == null || matrix.GetLength(0) == 0)
             {
                 return;
@@ -29,11 +30,13 @@ namespace Lab6
             }
 
             RemoveRow(ref matrix, rowIndex);
+            // end
         }
         public int Task2(int[,] A, int[,] B, int[,] C)
         {
             int answer = 0; // 1 - increasing   0 - no sequence   -1 - decreasing
 
+            // code here
             double[] values = new double[3];
             values[0] = GetAverageExceptEdges(A);
             values[1] = GetAverageExceptEdges(B);
@@ -51,9 +54,11 @@ namespace Lab6
             }
 
             return answer;
+            // end
         }
         public void Task3(ref int[,] matrix, Func<int[,], int> method)
         {
+            // code here
             if (matrix == null || method == null)
             {
                 return;
@@ -70,9 +75,11 @@ namespace Lab6
             }
 
             RemoveColumn(ref matrix, col);
+            // end
         }
         public void Task4(ref int[,] matrix)
         {
+            // code here
             if (matrix == null)
             {
                 matrix = null;
@@ -91,9 +98,11 @@ namespace Lab6
                     col++;
                 }
             }
+            // end
         }
         public void Task5(ref int[,] matrix, Finder find)
         {
+            // code here
             if (matrix == null || find == null)
             {
                 matrix = null;
@@ -161,9 +170,11 @@ namespace Lab6
             }
 
             matrix = result;
+            // end
         }
         public void Task6(int[,] matrix, SortRowsStyle sort)
         {
+            // code here
             if (matrix == null || sort == null)
             {
                 return;
@@ -173,9 +184,11 @@ namespace Lab6
             {
                 sort(matrix, row);
             }
+            // end
         }
         public void Task7(int[,] matrix, ReplaceMaxElements transform)
         {
+            // code here
             if (matrix == null || transform == null)
             {
                 return;
@@ -187,11 +200,13 @@ namespace Lab6
                 int maxValue = FindMaxInRow(matrix, i);
                 transform(matrix, i, maxValue);
             }
+            // end
         }
         public double[,] Task8(double a, double b, double h, Func<double, double> getSum, Func<double, double> getY)
         {
             double[,] answer = null;
 
+            // code here
             if (getSum == null || getY == null || h <= 0 || double.IsNaN(a) || double.IsNaN(b) || b < a)
             {
                 return answer;
@@ -212,11 +227,13 @@ namespace Lab6
             }
 
             return answer;
+            // end
         }
         public int Task9(int[,] matrix, GetTriangle triangle)
         {
             int answer = 0;
 
+            // code here
             if (!IsSquare(matrix) || triangle == null)
             {
                 return answer;
@@ -224,11 +241,13 @@ namespace Lab6
 
             answer = GetSum(triangle, matrix);
             return answer;
+            // end
         }
         public bool Task10(int[][] array, Predicate<int[][]> func)
         {
             bool res = false;
 
+            // code here
             if (array == null || func == null)
             {
                 return res;
@@ -237,6 +256,7 @@ namespace Lab6
             res = func(array);
 
             return res;
+            // end
         }
 
         public int FindDiagonalMaxIndex(int[,] matrix)
