@@ -20,6 +20,7 @@ namespace Lab6
             if (!IsSquare(matrix))
             {
                 // для неквадратных – ничего не делаем
+                // это для пул реквеста но все плохо
                 return;
             }
 
@@ -954,3 +955,4 @@ namespace Lab6
         }
     }
 }
+
